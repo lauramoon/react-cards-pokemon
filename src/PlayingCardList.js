@@ -8,7 +8,8 @@ function CardTable() {
   const dataFormat = ({ cards }) => ({ image: cards[0].image });
   const [cards, addCard, removeCards] = useAxios(
     "https://deckofcardsapi.com/api/deck/new/draw/",
-    dataFormat
+    dataFormat,
+    "cards"
   );
   return (
     <div className="PlayingCardList">

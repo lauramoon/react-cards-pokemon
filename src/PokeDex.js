@@ -15,7 +15,8 @@ function PokeDex() {
   });
   const [pokemon, addPokemon, removePokemon] = useAxios(
     "https://pokeapi.co/api/v2/pokemon/",
-    dataFormat
+    dataFormat,
+    "pokemon"
   );
 
   return (
