@@ -17,7 +17,10 @@ const useAxios = (url) => {
     const response = await axios.get(url);
     setData((data) => [...data, { ...response.data, id: uuid() }]);
   };
-  return [data, addCard];
+  const startOver = () => {
+    setData([]);
+  };
+  return [data, addCard, startOver];
 };
 
 export { useFlip, useAxios };
