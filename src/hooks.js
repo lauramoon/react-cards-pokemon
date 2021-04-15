@@ -10,12 +10,15 @@ const useFlip = () => {
   return [isFacingUp, flip];
 };
 
-const useAxios = (url) => {
+const useAxios = (url, dataFormat) => {
   const [data, setData] = useState([]);
   const addCard = async (name) => {
     url = name !== "" ? `${url}${name}/` : url;
     const response = await axios.get(url);
-    setData((data) => [...data, { ...response.data, id: uuid() }]);
+    console.log(response.data);
+    const newData = dataFormat(response.data);
+    console.log(newData);
+    setData((data) => [...data, { ...newData, id: uuid() }]);
   };
   const startOver = () => {
     setData([]);
