@@ -1,8 +1,12 @@
+# Cards and Pokemon
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This app displays and flips two types of card using two different APIs. It incorporates several custom hooks.
 
 ## Available Scripts
 
-In the project directory, you can run:
+To use, clone this repo. In the project directory, you can then run:
 
 ### `npm start`
 
